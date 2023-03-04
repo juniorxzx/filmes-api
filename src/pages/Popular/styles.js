@@ -15,6 +15,21 @@ export const MoovieList = styled.ul`
   row-gap: 4rem;
 `;
 
+export const Back = styled.button`
+  background-color: red;
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  color: white;
+  padding: 0.8rem 2rem;
+  margin-top: 1rem;
+  font-size: 100%;
+  transition: ease-in 0.5s;
+
+  &:hover {
+    background-color: #800000;
+  }
+`;
 export const Moovie = styled.li`
   display: flex;
   flex-direction: column;
@@ -37,43 +52,5 @@ export const Moovie = styled.li`
   }
   a:hover {
     transform: scale(1.1);
-  }
-`;
-
-export const Search = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  .button {
-    display: flex;
-    align-items: center;
-
-    text-decoration: none;
-    background-color: red;
-    border: none;
-    cursor: pointer;
-    border-radius: 1rem;
-    color: white;
-    padding: 0.8rem 2rem;
-    font-size: 100%;
-    transition: ease-in 0.5s;
-    &:hover {
-      background-color: #800000;
-    }
-  }
-  input {
-    width: 80%;
-    height: 64px;
-    font-size: x-large;
-    border-radius: 3rem;
-    padding: 1rem;
-    border: none;
-    color: red;
-    font-weight: 600;
-    text-transform: capitalize;
-  }
-
-  input:focus {
-    outline: none;
   }
 `;
