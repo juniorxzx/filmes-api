@@ -11,17 +11,18 @@ function Details() {
   const image_path = "https://image.tmdb.org/t/p/w500/";
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=${key}&language=pt-BR-US&page=1`
+      `https://api.themoviedb.org/3/movie/${id}?api_key=${key}&language=pt-BR&page=1`
     )
       .then((response) => response.json())
       .then((data) => {
-        const { title, poster_path, overview, release_date } = data;
+        const { title, poster_path, overview, release_date, video } = data;
         const moovie = {
           id,
           title: title,
           sinopse: overview,
           img: `${image_path}${poster_path}`,
           releaseDate: release_date,
+          video: video
         };
 
         setMoovies(moovie);
@@ -36,7 +37,9 @@ function Details() {
           <span>Sinopse: {moovies.sinopse}</span>
           <span className="release-date">
             Data de lançamento: {moovies.releaseDate}
+            
           </span>
+        
 
           <Link to={"/"}>
             <button>Voltar</button>

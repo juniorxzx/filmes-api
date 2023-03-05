@@ -47,10 +47,6 @@ export const Moovie = styled.li`
     font-size: 120%;
     text-align: center;
   }
-  a {
-    transition: all 0.5s;
-  }
-  a:hover {
-    transform: scale(1.1);
-  }
+ 
+ 
 `;

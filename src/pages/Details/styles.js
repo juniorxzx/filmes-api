@@ -38,7 +38,7 @@ padding: 4rem 0;
         transition: ease-in 0.5s;
 
         &:hover{
-            background-color: aquamarine;
+            background-color: #800000;
         }
 
     }

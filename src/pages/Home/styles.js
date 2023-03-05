@@ -32,40 +32,20 @@ export const Moovie = styled.li`
     font-size: 120%;
     text-align: center;
   }
-  a {
-    transition: all 0.5s;
-  }
-  a:hover {
-    transform: scale(1.1);
-  }
 `;
 
 export const Search = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  .button {
-    display: flex;
-    align-items: center;
-
-    text-decoration: none;
-    background-color: red;
-    border: none;
-    cursor: pointer;
-    border-radius: 1rem;
-    color: white;
-    padding: 0.8rem 2rem;
-    font-size: 100%;
-    transition: ease-in 0.5s;
-    &:hover {
-      background-color: #800000;
-    }
+  li {
+    margin: 20px 0;
   }
   input {
     width: 80%;
-    height: 64px;
-    font-size: x-large;
-    border-radius: 3rem;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 1rem;
     padding: 1rem;
     border: none;
     color: red;
@@ -75,5 +55,16 @@ export const Search = styled.div`
 
   input:focus {
     outline: none;
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 1rem;
+    border: none;
+    background-color: white;
+  
   }
 `;

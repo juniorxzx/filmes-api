@@ -6,10 +6,10 @@ import { Container, MoovieList, Moovie, Back } from "./styles";
 
 function Popular() {
   const [moovies, setMoovies] = useState([]);
-  const [searchInput, setSearchInput] = useState("");
+
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=pt-BR-US&page=1`
+      `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=pt-BR&page=1`
     )
       .then((response) => response.json())
       .then((data) => setMoovies(data.results));
@@ -25,16 +25,12 @@ function Popular() {
         {moovies.map((moovie) => {
           return (
             <Moovie key={moovie.id}>
-              <Moovie key={moovie.id}>
-                <Link to={`/details/${moovie.id}`}>
-                  <img
-                    src={`https://image.tmdb.org/t/p/w500/${moovie.poster_path}`}
-                    alt={moovie.title}
-                  />
-                </Link>
-                <span>{moovie.title}</span>
-              </Moovie>
-
+              <Link to={`/details/${moovie.id}`}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500/${moovie.poster_path}`}
+                  alt={moovie.title}
+                />
+              </Link>
               <span>{moovie.title}</span>
             </Moovie>
           );
